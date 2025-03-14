@@ -2,10 +2,17 @@ package com.example.mystudycodes25
 
 class Usuario {
 
+    val cor = "Branco"
+
     fun correr(){
         println("correndo")
     }
+}
 
+class UsuarioProfissional {
+    fun correrProfissionalmente(){
+        println("correndo profissionalmente")
+    }
 }
 
 fun retornaNome () {
@@ -55,8 +62,9 @@ fun main() {
     val nome = retornaNome()
     println(nome)
 
-    //instanciando um objeto da classe Usuario
+    //instanciando um objeto da classe Usuario e acessando método e atributo
     val usuarioA = Usuario()
     usuarioA.correr()
+    println(usuarioA.cor)
 
 }
