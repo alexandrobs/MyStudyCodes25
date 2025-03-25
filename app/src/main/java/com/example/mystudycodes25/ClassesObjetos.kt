@@ -1,5 +1,12 @@
 package com.example.mystudycodes25
 
+/* Pilares do OO
+Abstração
+Herança
+Encapsulamento
+Polimorfismo
+ */
+
 class Jogador {
     var kart = ""
     var pneu = ""
