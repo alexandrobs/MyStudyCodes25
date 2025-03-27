@@ -4,17 +4,22 @@ package com.example.mystudycodes25
 Herança
 Polimorfismo
 Polimorfismo por sobreposição
+
+---
+
+Classe concreta vs classe abstrata,
+metodo abstrato
  */
 
 //classe mae
-open class Animal() {
+abstract class Animal() {
     var cor = ""
     var tamanho = ""
     var peso = 0.0
 
     open fun correr () = println("correndo como um")
 
-    fun dormir() = println("dormindo")
+    abstract fun dormir()
 }
 
 //classe filha
@@ -26,6 +31,10 @@ class Cao() : Animal() {
     override fun correr() {
         super.correr()
         println("cao de 4 patas")
+    }
+
+    override fun dormir() {
+        println("dormindo como um cao na casinha")
     }
 }
 
@@ -39,9 +48,14 @@ class Passaro() : Animal() {
         super.correr()
         println("passaro de 2 perninhas e batendo as asas")
     }
+
+    override fun dormir() {
+        println("dormindo como um passaro no galho")
+    }
 }
 
 fun main() {
+
     val cao = Cao()
     cao.cor = "Preto"
     cao.tamanho = "Grande"
