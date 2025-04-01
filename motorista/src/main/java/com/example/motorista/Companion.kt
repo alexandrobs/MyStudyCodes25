@@ -17,6 +17,27 @@ class Carro(
     }
 }
 
+class Usuario {
+
+    //não nomeado
+    companion object {
+
+        fun verificaSeUsuarioEstaLogado(): Boolean {
+            return true
+        }
+    }
+}
+class Usuario2 {
+
+    //nomeado
+    companion object regra{
+        fun verificaSeUsuarioEstaLogado(): Boolean {
+            return true
+        }
+    }
+}
+
+
 fun main() {
 
     println("Velocidade máxima permititda: ${Carro.VELOCIDADE_MAX_PERMITIDA}")
@@ -29,4 +50,14 @@ fun main() {
     ferrari.exibirInformações()
 
     println("PI: ${Math.PI}")
+
+    //Aqui precisa instancia a classe para usar o metodo verifica...
+    //val usuario = Usuario()
+    //print(usuario.verificaSeUsuarioEstaLogado())
+
+    //Aqui não precisamos instanciar a classe para usar o metodo verifica,
+    // apenas chamamos a classe e acessamos seu metodo de classe...
+    println(Usuario.verificaSeUsuarioEstaLogado())
+
+    println(Usuario2.regra.verificaSeUsuarioEstaLogado())
 }
