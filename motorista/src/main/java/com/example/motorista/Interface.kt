@@ -6,6 +6,7 @@ interface Presidenciavel {
 
 abstract class Pessoa() {
     fun comer() = println("comer")
+    //aqui iria obrigar todas as classes a implementar, por isso fica melhor em uma interface
     //abstract fun candidatarSe()
 }
 
